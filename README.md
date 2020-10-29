@@ -6,4 +6,8 @@
 
 ### lab2 - semaphores
 - [x] synchronize multiple threads using binary semaphores
-- [x] find solution for the "eating philosophers" problem
+- [x] "eating philosophers" problem
+
+### lab3 - wait(), notify()
+- [x] synchronize multiple threads using wait(), notify(), notifyAll()
+- [x] "producers and consumers" problem
