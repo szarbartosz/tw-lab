@@ -15,7 +15,7 @@ public class Producer implements Runnable {
     public void run() {
         Random random = new Random();
         while(true) {
-            int dataSize = random.nextInt(this.buffer.getCapacity());
+            int dataSize = random.nextInt(this.buffer.getCapacity()/2);
             List<Integer> data = new LinkedList<>();
             for (int i = 0; i < dataSize; i++) {
                 data.add(random.nextInt(10));

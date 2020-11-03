@@ -14,7 +14,7 @@ public class Consumer implements Runnable {
     public void run() {
         Random random = new Random();
         while(true) {
-            int dataSize = random.nextInt(this.buffer.getCapacity());
+            int dataSize = random.nextInt(this.buffer.getCapacity()/2);
             try {
                 List<Integer> data = this.buffer.consume(dataSize);
                 System.out.println(Thread.currentThread().getName() + " consumed: " + data);

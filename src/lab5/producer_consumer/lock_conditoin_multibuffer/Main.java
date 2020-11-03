@@ -20,6 +20,6 @@ public class Main {
         Arrays.stream(consumers).forEach(Thread::start);
     }
     public static void main(String[] args) {
-        run(10,2,1);
+        run(20,2,1);
     }
 }
