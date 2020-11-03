@@ -11,3 +11,7 @@
 ### lab3 - wait(), notify()
 - [x] synchronize multiple threads using wait(), notify(), notifyAll()
 - [x] "producers and consumers" problem
+
+### lab4 - lock, condition
+- [x] synchronize multiple threads using lock and conditions
+- [x] "producers and consumers" problem
