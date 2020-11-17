@@ -1,4 +1,4 @@
-package lab5.producer_consumer.lock_conditoin_multibuffer;
+package lab5.extra_task.two_locks_boolean;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -14,15 +14,15 @@ public class Producer implements Runnable {
     @Override
     public void run() {
         Random random = new Random();
-        while(true) {
-            int dataSize = random.nextInt(this.buffer.getCapacity()/2);
+        while (true) {
+            int dataSize = random.nextInt(this.buffer.getProdMax() - this.buffer.getProdMin() + 1) + this.buffer.getProdMin();
             List<Integer> data = new LinkedList<>();
             for (int i = 0; i < dataSize; i++) {
                 data.add(random.nextInt(10));
             }
             try {
                 this.buffer.produce(data);
-                System.out.println(Thread.currentThread().getName() + " produced: " + data);
+//                System.out.println(Thread.currentThread().getName() + " produced: " + data);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

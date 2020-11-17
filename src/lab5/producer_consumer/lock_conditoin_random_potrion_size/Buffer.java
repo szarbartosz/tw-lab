@@ -1,4 +1,4 @@
-package lab5.producer_consumer.lock_conditoin_multibuffer;
+package lab5.producer_consumer.lock_conditoin_random_potrion_size;
 
 import java.util.LinkedList;
 import java.util.List;

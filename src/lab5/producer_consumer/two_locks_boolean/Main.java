@@ -1,4 +1,4 @@
-package lab5.producer_consumer.lock_conditoin_multibuffer;
+package lab5.producer_consumer.two_locks_boolean;
 
 import java.util.Arrays;
 
