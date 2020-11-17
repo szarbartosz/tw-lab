@@ -7,7 +7,7 @@ W rozważanym przez nas problemie zagłodzenie nastąpi, gdy ciąg niefortunnych
 - w wersji programu z hasWaiters() może dojść do zagłodzenia, gdyż w wyniku błędnej sygnalizacji w kolejce firstProducer/firstConsumer może czekać wiele wątków - wśród nich może znajdować się taki który przy każdym wzbudzeniu chce wyprodukować/skonsumować za dużą porcję danych co będzie skutkowało jego ponownym uśpieniem 
 
 ##### przykład pojawienia się kilku konsumentów w kolejce firstConsumer:
-![image](resources/firstConsumer)
+![image](resources/firstConsumer.png)
 
 - w wersji programu z booleanem nie może dojść do zagłodzenia, gdyż mamy gwarancję że w kolejce firstProducer/firstConsumer znajduje się maksymalnie jeden proces który oczekuje na dogodne warunki do zakończenia działania (przy bezpiecznym rozmiarze bufora takie zakończenie zawsze nastąpi)
 

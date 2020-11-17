@@ -15,3 +15,7 @@
 ### lab4 - lock, condition
 - [x] synchronize multiple threads using lock and conditions
 - [x] "producers and consumers" problem
+
+### lab5 - starvation, deadlock
+- [x] observe starvation
+- [x] cause a deadlock
