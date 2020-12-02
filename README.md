@@ -19,3 +19,9 @@
 ### lab5 - starvation, deadlock
 - [x] observe starvation
 - [x] cause a deadlock
+
+### lab6 - ticket monitor
+- [x] extract buffer out of the monitor
+
+### lab7 - active object
+- [x] implement producers and consumers problem using active object pattern
