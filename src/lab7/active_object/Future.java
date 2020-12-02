@@ -6,12 +6,12 @@ public class Future {
     private volatile boolean isReady;
     private volatile List<Integer> data;
 
-    public void setReady() {
-        this.isReady = true;
-    }
-
     public boolean isReady() {
         return isReady;
+    }
+
+    public void setReady() {
+        this.isReady = true;
     }
 
     public List<Integer> getData() {

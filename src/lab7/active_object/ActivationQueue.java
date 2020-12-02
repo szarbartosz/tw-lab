@@ -30,22 +30,6 @@ public class ActivationQueue {
         return consumersQueue.getFirst();
     }
 
-//    public boolean removeProductionRequest(ProduceMethodRequest request) {
-//        if (!producersQueue.isEmpty() && producersQueue.getFirst() == request) {
-//            producersQueue.removeFirst();
-//            return true;
-//        }
-//        return false;
-//    }
-//
-//    public boolean removeConsumptionRequest(ConsumeMethodRequest request) {
-//        if (!consumersQueue.isEmpty() && consumersQueue.getFirst() == request) {
-//            consumersQueue.removeFirst();
-//            return true;
-//        }
-//        return false;
-//    }
-
     public ProduceMethodRequest removeProductionRequest() {
         if (producersQueue.isEmpty()) return null;
         return producersQueue.removeFirst();

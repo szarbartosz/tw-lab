@@ -44,61 +44,22 @@ public class Scheduler extends Thread {
                 lock.unlock();
             }
 
-//            boolean wasSomethingTaken = false;
-//
-//            if (produceMethodRequest != null && produceMethodRequest.guard()) {
-//                wasSomethingTaken = true;
-//                lock.lock();
-//                try {
-//                    if (queue.removeProductionRequest(produceMethodRequest)) {
-//                        produceMethodRequest.call();
-//                    }
-//                } finally {
-//                    lock.unlock();
-//                }
-//            }
-//
-//            if (consumeMethodRequest != null && consumeMethodRequest.guard()) {
-//                wasSomethingTaken = true;
-//                lock.lock();
-//                try {
-//                    if (queue.removeConsumptionRequest(consumeMethodRequest)) {
-//                        consumeMethodRequest.call();
-//                    }
-//                } finally {
-//                    lock.unlock();
-//                }
-//            }
-//
-//            if (!wasSomethingTaken) {
-//                try {
-//                    lock.lock();
-//                    while (!queue.hasRequests()) {
-//                        condition.await();
-//                    }
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                } finally {
-//                    lock.unlock();
-//                }
-//            }
-
             boolean requestTaken = false;
 
-            if (queue.hasProductionRequests()) {
+            if (produceMethodRequest != null) {
                 ProduceMethodRequest request = queue.getProductionRequest();
                 if (request.guard()) {
+                    request = queue.removeProductionRequest();
                     request.call();
-                    queue.removeProductionRequest();
                     requestTaken = true;
                 }
             }
 
-            if (queue.hasConsumptionRequests()) {
+            if (consumeMethodRequest != null) {
                 ConsumeMethodRequest request = queue.getConsumptionRequest();
                 if (request.guard()) {
+                    request = queue.removeConsumptionRequest();
                     request.call();
-                    queue.removeConsumptionRequest();
                     requestTaken = true;
                 }
             }

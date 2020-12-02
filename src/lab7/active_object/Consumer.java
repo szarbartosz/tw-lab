@@ -23,6 +23,7 @@ public class Consumer extends Thread {
             while (!future.isReady()) {
                 try {
                     Thread.sleep(1000);
+                    System.out.println("liczę sobie cosinusa");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

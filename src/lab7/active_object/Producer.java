@@ -29,6 +29,7 @@ public class Producer extends Thread {
             while (!future.isReady()) {
                 try {
                     Thread.sleep(1000);
+                    System.out.println("liczę sobie sinusa");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
