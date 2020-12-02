@@ -1,15 +1,16 @@
 package lab7.active_object;
 
-import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class ActivationQueue {
 
-    private final ConcurrentLinkedDeque<ProduceMethodRequest> producersQueue;
-    private final ConcurrentLinkedDeque<ConsumeMethodRequest> consumersQueue;
+    private final Deque<ProduceMethodRequest> producersQueue;
+    private final Deque<ConsumeMethodRequest> consumersQueue;
 
     public ActivationQueue() {
-        this.producersQueue = new ConcurrentLinkedDeque<>();
-        this.consumersQueue = new ConcurrentLinkedDeque<>();
+        this.producersQueue = new LinkedList<>();
+        this.consumersQueue = new LinkedList<>();
     }
 
     public void addProductionRequest(ProduceMethodRequest request) {
