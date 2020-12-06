@@ -47,19 +47,29 @@ public class Scheduler extends Thread {
             boolean requestTaken = false;
 
             if (produceMethodRequest != null) {
-                ProduceMethodRequest request = queue.getProductionRequest();
-                if (request.guard()) {
-                    request = queue.removeProductionRequest();
-                    request.call();
+                if (produceMethodRequest.guard()) {
+                    lock.lock();
+                    try {
+                        if (produceMethodRequest.equals(queue.removeProductionRequest())) {
+                            produceMethodRequest.call();
+                        }
+                    } finally {
+                        lock.unlock();
+                    }
                     requestTaken = true;
                 }
             }
 
             if (consumeMethodRequest != null) {
-                ConsumeMethodRequest request = queue.getConsumptionRequest();
-                if (request.guard()) {
-                    request = queue.removeConsumptionRequest();
-                    request.call();
+                if (consumeMethodRequest.guard()) {
+                    lock.lock();
+                    try {
+                        if (consumeMethodRequest.equals(queue.removeConsumptionRequest())) {
+                            consumeMethodRequest.call();
+                        }
+                    } finally {
+                        lock.unlock();
+                    }
                     requestTaken = true;
                 }
             }

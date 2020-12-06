@@ -17,8 +17,8 @@ public class ConsumeMethodRequest implements MethodRequest {
     @Override
     public void call() {
         List<Integer> result = servant.consume(dataSize);
-        future.setReady();
         future.setData(result);
+        future.setReady();
     }
 
     @Override
