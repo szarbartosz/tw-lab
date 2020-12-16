@@ -1,10 +1,10 @@
-package lab8.active_object.main;
+package lab8_9.active_object.main;
 
-import lab8.active_object.*;
-import lab8.monitor.Buffer;
-import lab8.monitor.Consumer;
-import lab8.monitor.Producer;
-import lab8.utilities.StatisticsUtility;
+import lab8_9.active_object.*;
+import lab8_9.monitor.Buffer;
+import lab8_9.monitor.Consumer;
+import lab8_9.monitor.Producer;
+import lab8_9.utilities.StatisticsUtility;
 
 import java.util.Arrays;
 

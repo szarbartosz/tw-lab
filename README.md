@@ -25,3 +25,13 @@
 
 ### lab7 - active object
 - [x] implement producers and consumers problem using active object pattern
+
+### lab8 - active object
+- [x] compare active object and monitor based approaches 
+
+### lab9 - active object vs monitor
+- [x] write report showing differences, between performance of active object and monitor based approaches
+
+### lab10 - csp
+- [x] install jcsp library
+- [x] implement producers/consumers problem according to csp pattern 

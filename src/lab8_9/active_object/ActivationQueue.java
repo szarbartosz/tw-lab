@@ -1,4 +1,4 @@
-package lab8.active_object;
+package lab8_9.active_object;
 
 import java.util.Deque;
 import java.util.LinkedList;

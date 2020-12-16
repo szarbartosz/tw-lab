@@ -1,12 +1,12 @@
-package lab8.active_object;
+package lab8_9.active_object;
 
-import lab8.utilities.StatisticsUtility;
+import lab8_9.utilities.StatisticsUtility;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-import static lab8.utilities.ExtraTaskUtility.performExtraTask;
+import static lab8_9.utilities.ExtraTaskUtility.performExtraTask;
 
 public class AoProducer extends Thread {
 

@@ -1,9 +1,7 @@
-package lab8.monitor;
+package lab8_9.monitor;
 
 import java.util.List;
 import java.util.Random;
-
-import static lab8.utilities.ExtraTaskUtility.performExtraTask;
 
 public class Consumer implements Runnable {
     private final Buffer buffer;

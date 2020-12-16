@@ -1,4 +1,4 @@
-package lab8.utilities;
+package lab8_9.utilities;
 
 public class StatisticsUtility {
     private volatile long MonitorTotalProductionTime;

@@ -1,7 +1,7 @@
-package lab8;
+package lab8_9;
 
-import lab8.active_object.main.Main;
-import lab8.utilities.StatisticsUtility;
+import lab8_9.active_object.main.Main;
+import lab8_9.utilities.StatisticsUtility;
 import org.junit.Test;
 
 import java.io.BufferedWriter;

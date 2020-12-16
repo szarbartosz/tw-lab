@@ -1,6 +1,6 @@
-package lab8.active_object;
+package lab8_9.active_object;
 
-import lab8.utilities.StatisticsUtility;
+import lab8_9.utilities.StatisticsUtility;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
