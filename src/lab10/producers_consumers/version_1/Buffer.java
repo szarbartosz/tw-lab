@@ -1,4 +1,4 @@
-package lab10.prod_cons;
+package lab10.producers_consumers.version_1;
 
 import org.jcsp.lang.*;
 

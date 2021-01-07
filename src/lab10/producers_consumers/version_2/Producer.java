@@ -1,4 +1,4 @@
-package lab10.prod_cons_single;
+package lab10.producers_consumers.version_2;
 
 import org.jcsp.lang.CSProcess;
 import org.jcsp.lang.One2OneChannelInt;
